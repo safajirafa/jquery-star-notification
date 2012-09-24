@@ -1,1 +1,1 @@
-An iOS like notification toast to star and unstar items
+## An iOS like notification toast to star and unstar items
