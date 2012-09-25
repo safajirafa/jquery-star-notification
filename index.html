@@ -39,34 +39,29 @@
 <li>Uses PUB/SUB pattern</li>
 <li>No dependencies on images</li>
 <li>Easy integration</li>
-<li><p>CSS3 based animation (for webkit browsers)</p></li>
-<li>
-<p>Plugin initialization</p>
+<li>CSS3 based animation (for webkit browsers)</li>
+</ul><h3>Plugin initialization</h3>
 
-<div class="highlight"><pre><span class="c1">// With optional parameters</span>
-<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-<span class="nx">fadeOutTime</span><span class="o">:</span> <span class="mi">800</span><span class="p">,</span> <span class="c1">// Same time as animation duration in css</span>
-<span class="nx">starChar</span><span class="o">:</span> <span class="s1">'&amp;#9733;'</span><span class="p">,</span>
-<span class="nx">unstarChar</span><span class="o">:</span> <span class="s1">'&amp;#9734;'</span><span class="p">,</span>
-<span class="nx">starLabel</span><span class="o">:</span> <span class="s1">'Starred'</span><span class="p">,</span>
-<span class="nx">unstarLabel</span><span class="o">:</span> <span class="s1">'Unstarred'</span> 
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">fadeOutTime</span><span class="o">:</span> <span class="mi">800</span><span class="p">,</span> <span class="c1">// Same time as animation duration in css</span>
+    <span class="nx">starChar</span><span class="o">:</span> <span class="s1">'&amp;#9733;'</span><span class="p">,</span>
+    <span class="nx">unstarChar</span><span class="o">:</span> <span class="s1">'&amp;#9734;'</span><span class="p">,</span>
+    <span class="nx">starLabel</span><span class="o">:</span> <span class="s1">'Starred'</span><span class="p">,</span>
+    <span class="nx">unstarLabel</span><span class="o">:</span> <span class="s1">'Unstarred'</span> 
 <span class="p">};</span>
+<span class="c1">// Parameters are optional</span>
 <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">starNotification</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
 </pre></div>
-</li>
-</ul><h3>Publish an event</h3>
 
-<p>** Notify of an starred item**</p>
+<h3>Publish an event - notify starred item</h3>
 
 <div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'starNotification'</span><span class="p">,</span> <span class="s1">'starred'</span><span class="p">);</span>
 </pre></div>
 
-<p>** Notify of an unstarred item **</p>
+<h3>Notify unstarred item</h3>
 
 <div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'starNotification'</span><span class="p">,</span> <span class="s1">'unstarred'</span><span class="p">);</span>
 </pre></div>
-
-
       </section>
     </div>
 
