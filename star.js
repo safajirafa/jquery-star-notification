@@ -26,7 +26,7 @@
                     case 'starred':
                         
                         $starType.html(options.starChar);
-                        $starLabel.text(options.starLabel); // consider localize this string
+                        $starLabel.text(options.starLabel);
                         
                         // Create notification
                         $notificationBox.append($starType).append($starLabel);
@@ -34,7 +34,7 @@
                     
                     case 'unstarred':
                         $starType.html(options.unstarChar);
-                        $starLabel.text(options.unstarLabel); // consider localize this string
+                        $starLabel.text(options.unstarLabel);
                         
                         // Create notification
                         $notificationBox.append($starType).append($starLabel);
@@ -63,7 +63,7 @@
 
     $.fn.starNotification.options = {
 
-        fadeOutTime: 1600, // Same time as animation duration in css
+        fadeOutTime: 800, // Same time as animation duration in css
         starChar: '&#9733;',
         unstarChar: '&#9734;',
         starLabel: 'Starred',
