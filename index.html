@@ -23,36 +23,36 @@
                 -webkit-box-shadow: inset 0 1px 0 0 #b1b9cb;
                 -webkit-font-smoothing: antialiased;
             }
-            
+
             button:active{
                 -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
-                box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white; 
+                box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
             }
         </style>
-        <link rel="stylesheet" type="text/css" href="star.css" />
+        <link rel="stylesheet" type="text/css" href="css/star.css" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script src="star.js"></script>
+        <script src="js/star.js"></script>
         <script>
             $(document).ready(function(){
-                
+
                 // initialize plugin
                 $(document).starNotification();
-                
+
                 $('button').click(function(){
-                    
+
                     // get data action
                     var action = $(this).data('action');
-                    
+
                     // trigger (publish) action to subscriber
                     $(document).trigger('starNotification', action);
-                    
+
                 });
-                
+
             });
         </script>
     </head>
     <body>
-        <h1>iOS Toast Notification</h1>        
+        <h1>iOS Toast Notification</h1>
         <button id="starred" data-action="starred">Add to favorites</button>
         <button id="unstarred" data-action="unstarred">Remove from favorites</button>
         <h4>To set items starred, or unstarred, No dependencies, no images, easy integration, Full CSS3 based animation</h4>
