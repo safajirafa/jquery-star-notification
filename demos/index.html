@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iOS Toast</title>
+        <style type="text/css">
+            html{ background-image: url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/grid.png'); text-align: center; }
+            h1{ font-size: 44px; }
+            h1,h2,h4,h5,a { color: #555; font-family: helvetica; text-shadow: 1px 1px 2px #FFF; }
+            button {
+                background-image: -webkit-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+                border: 1px solid #172d6e;
+                border-bottom: 1px solid #0e1d45;
+                border-radius: 5px;
+                box-shadow: inset 0 1px 0 0 #b1b9cb;
+                color: #fff;
+                font: bold 16px/1 "helvetica neue", helvetica, arial, sans-serif;
+                padding: 9px 0 10px 0;
+                text-decoration: none;
+                text-align: center;
+                text-shadow: 0 -1px 1px #000f4d;
+                width: 220px;
+                margin: 20px;
+                -webkit-box-shadow: inset 0 1px 0 0 #b1b9cb;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            button:active{
+                -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+                box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="https://rawgithub.com/safajirafa/jquery-star-notification/master/css/star.css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://rawgithub.com/safajirafa/jquery-star-notification/master/js/star-toast-0.0.1.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                // initialize plugin
+                $(document).starNotification();
+
+                $('button').click(function(){
+
+                    // get data action
+                    var action = $(this).data('action');
+
+                    // trigger (publish) action to subscriber
+                    $(document).trigger('starNotification', action);
+
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <h1>iOS Toast Notification</h1>
+        <button id="starred" data-action="starred">Add to favorites</button>
+        <button id="unstarred" data-action="unstarred">Remove from favorites</button>
+        <h4>To set items starred, or unstarred, No dependencies, no images, easy integration, Full CSS3 based animation</h4>
+        <h4>This jQuery plugin uses the PUB/SUB pattern as a decoupled widget</h4>
+        <h4>Usage: Publishing event notifications</h4>
+        <h5>$(document).trigger("starNotification", 'starred');</h5>
+        <h5>$(document).trigger("starNotification", 'unstarred');</h5>
+        <a href="https://github.com/safajirafa/Playground/tree/gh-pages/iosToast">See code here</a>
+    </body>
+</html>
