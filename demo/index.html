@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Star notification jQuery plugin : An iOS like toast notification" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Star notification jQuery plugin</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/safajirafa/jquery-star-notification">View on GitHub</a>
+
+          <h1 id="project_title">Star notification jQuery plugin</h1>
+          <h2 id="project_tagline">An iOS like toast notification</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/safajirafa/jquery-star-notification/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/safajirafa/jquery-star-notification/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>An iOS like notification toast to star and unstar items (webkit browsers)</h3>
+
+<p>This plugin works as a decoupled widget with the following features:</p>
+
+<ul>
+<li>Uses PUB/SUB pattern</li>
+<li>No dependencies on images</li>
+<li>Easy integration</li>
+<li>CSS3 based animation (for webkit browsers)</li>
+</ul><h3>Plugin initialization</h3>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">fadeOutTime</span><span class="o">:</span> <span class="mi">800</span><span class="p">,</span> <span class="c1">// Same time as animation duration in css</span>
+    <span class="nx">starChar</span><span class="o">:</span> <span class="s1">'&amp;#9733;'</span><span class="p">,</span>
+    <span class="nx">unstarChar</span><span class="o">:</span> <span class="s1">'&amp;#9734;'</span><span class="p">,</span>
+    <span class="nx">starLabel</span><span class="o">:</span> <span class="s1">'Starred'</span><span class="p">,</span>
+    <span class="nx">unstarLabel</span><span class="o">:</span> <span class="s1">'Unstarred'</span> 
+<span class="p">};</span>
+<span class="c1">// Parameters are optional</span>
+<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">starNotification</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
+</pre></div>
+
+<h3>Publish an event - notify starred item</h3>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'starNotification'</span><span class="p">,</span> <span class="s1">'starred'</span><span class="p">);</span>
+</pre></div>
+
+<h3>Notify unstarred item</h3>
+
+<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'starNotification'</span><span class="p">,</span> <span class="s1">'unstarred'</span><span class="p">);</span>
+</pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Star notification jQuery plugin maintained by <a href="https://github.com/safajirafa">safajirafa</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
