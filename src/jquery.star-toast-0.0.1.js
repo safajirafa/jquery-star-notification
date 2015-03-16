@@ -4,10 +4,11 @@
  * Licensed under the MIT license
  */
 
+/*global jQuery, window, document*/
 ;(function ( $, window, document, undefined ) {
+	'use strict';
 
 	$.fn.starNotification = function ( options ) {
-
 		options = $.extend( {}, $.fn.starNotification.options, options );
 
 		return this.each(function () {
@@ -15,12 +16,12 @@
 			var elem = $(this);
 
 			// Notification box html
-			var $notificationBox = $('<div></div>').addClass('star-notification');
+			var $notificationBox = $('<div>').addClass('star-notification');
 			var $starType = $('<span></span>');
 			var $starLabel = $('<label></label>');
 
 			//subscribe to 'starNotification' custom event
-			elem.on( "starNotification", function( e, action ) {
+			elem.on( 'starNotification', function( e, action ) {
 
 				switch(action){
 					case 'starred':
