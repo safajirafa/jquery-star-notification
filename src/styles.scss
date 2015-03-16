@@ -24,23 +24,22 @@
     -webkit-animation-name: notify;
     -webkit-animation-duration: 800ms;
     -webkit-animation-fill-mode: both;
-}
-
-.star-notification span{
-    font-size: 23.5px;
-    color: #FFF;
-    text-shadow: 0 -1px 1px #333;
-    -webkit-text-stroke: 1px #FFF;
     -webkit-font-smoothing: antialiased;
-}
 
-.star-notification label{
-    display: block;
-    font-family: Helvetica;
-    font-weight: bold;
-    color: #FFF;
-    margin-top: 9px;
-    font-size: 15px;
-    text-shadow: 0 -1px 3px #000;
-    -webkit-font-smoothing: antialiased;
+    span {
+        font-size: 23.5px;
+        color: #FFF;
+        text-shadow: 0 -1px 1px #333;
+        -webkit-text-stroke: 1px #FFF;
+    }
+
+    label {
+        display: block;
+        font-family: Helvetica;
+        font-weight: bold;
+        color: #FFF;
+        margin-top: 9px;
+        font-size: 15px;
+        text-shadow: 0 -1px 3px #000;
+    }
 }
