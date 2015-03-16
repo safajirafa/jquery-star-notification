@@ -1,0 +1,22 @@
+{
+  "name": "toast-notification",
+  "version": "1.0.0",
+  "description": "[Check out the project page](http://safajirafa.github.io/toast-notification/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/safajirafa/toast-notification.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/safajirafa/toast-notification/issues"
+  },
+  "homepage": "https://github.com/safajirafa/toast-notification",
+  "devDependencies": {
+    "serve-static": "^1.9.2"
+  }
+}
